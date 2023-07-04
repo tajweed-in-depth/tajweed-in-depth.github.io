@@ -1,0 +1,1148 @@
+* {
+ box-sizing: border-box;
+}
+*:before, *:after {
+ box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 300;
+  margin: 0%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.topbar {
+  background-color: #2D2D2B;
+  max-width: 100%;
+  max-height: 100%;
+  position: sticky;
+  margin: 0%;
+}
+
+
+.title {
+  font-family: 'Barlow', sans-serif;
+  font-size: 30px;
+  /* font-weight: 100; */
+  font-weight: 400;
+  text-align: center;
+  margin-top: 3%;
+  margin-bottom: 3%;
+
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* NAVBAR */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: none;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  background-color: rgba(247, 247, 247, 1);
+  font-size: 10px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+}
+
+.marquee {
+  width: 650px;
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+
+}
+
+.bounce p {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  will-change: transform;
+  /* show the marquee just outside the paragraph */
+  animation: marquee 30s linear infinite;
+}
+
+.marquee span:hover {
+  animation-play-state: paused
+}
+
+/* Make it move */
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+/* Respect user preferences about animations */
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    white-space: normal
+  }
+  .marquee span {
+    animation: none;
+    padding-left: 0;
+
+  }
+}
+
+
+.homePageVid{
+  padding: 5%;
+  padding-top: 0;
+
+}
+
+li {
+  display: inline-block;
+  text-align: center;
+}
+
+li a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  font-size: 2em;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: white;
+  opacity: 90%;
+  color: black;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown2 {
+  display: inline-block;
+  width: 100%;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  text-align: left;
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  max-width: 190px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content2 {
+  text-align: left;
+  display: none;
+  position: absolute;
+  background-color: lightgrey;
+  min-width: 160px;
+  max-width: 190px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 2;
+  margin-left: 100%;
+  margin-top: -25%;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  text-align: left;
+  width: 100%;
+}
+
+.dropdown-content li {
+  width: 100%;
+}
+
+.dropdown-content2 li {
+  width: 100%;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown2:hover .dropdown-content2 {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown2btn { width: 100%;}
+
+
+
+.icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  li a {
+    display: none;
+  }
+  .icon {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .responsive li {
+    display: block;
+    text-align: center;
+  }
+  .responsive li a {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  li a {
+    display: none;
+  }
+  .icon {
+    display: block;
+  }
+
+  .responsive li {
+    display: block;
+    text-align: center;
+  }
+  .responsive li a {
+    display: block;
+  }
+}
+
+/* Popup Code */
+.button {
+  font-size: 170%;
+  padding: 10%;
+  color: black;
+  border: 1.5px solid black;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  box-shadow: 5px 5px lightgrey;
+
+}
+.button:hover {
+  background-color: black;
+  color: rgba(247, 247, 247, 1);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  /* transition: opacity 500ms; */
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 50px auto;
+  padding: 15px;
+  background: rgba(247, 247, 247, 1);
+  border-radius: 5px;
+  width: 70%;
+  height: 80%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+.popup .close:hover {
+  color: grey;
+}
+.popup .content {
+  max-height: 100%;
+  overflow: auto;
+  color: black;
+  font-size: 240%;
+  margin: 5% auto;
+  text-align: center;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+}
+
+/* Table info */
+
+.chartTableTH {
+  padding: 0%;
+
+}
+
+table, th, td {
+  margin-top: 7%;
+  width: 100%;
+
+}
+
+th, td {
+  padding-top: 15%;
+  width: 5%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+/* .slideShowCont {
+  width: 100%;
+} */
+
+iframe {
+  align-items: center;
+  justify-content: center;
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2%;
+}
+
+.responsive-google-slides {
+   position: relative;
+   padding-bottom: 56.25%; /* 16:9 Ratio */
+   height: 0;
+   overflow: hidden;
+ }
+ .responsive-google-slides iframe {
+   border: 0;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100% !important;
+   height: 100% !important;
+ }
+
+
+/* PARALLAX EFFECT */
+
+/* for the first image */
+.parallax1 {
+  background-image: url("img1p.jpg");
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* for the second image */
+.parallax {
+  background-image: url("img2p.jpg");
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* for the third image */
+.parallax2 {
+  background-image: url("https://tajweedindepth.com/yellowDryDates.jpg");
+  min-height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* for the fourth image */
+.parallax3 {
+  background-image: url("Ramadan1.png");
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.parallax4 {
+  background-image: url("Remind1.png");
+  min-height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax5 {
+  background-image: url("Remind2.png");
+  min-height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* ABOUT ME CONTAINER */
+
+.pictures {
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  background-color: rgba(247, 247, 247, 1);
+  padding: 0;
+  margin: 0;
+}
+
+.right {
+  float: right;
+  margin-right: 2%;
+  background-color: transparent;
+  margin-bottom: 2%;
+}
+
+.left {
+  float: left;
+  margin-left: 5%;
+  background-color: transparent;
+  margin-bottom: 2%;
+}
+
+.log {
+  margin-top: 2%;
+}
+
+img {
+  width:130%;
+}
+
+.slidesSnip1 {
+  float: left;
+  width: 100%;
+}
+
+.slidesSnip {
+  float: left;
+  width: 45%;
+}
+
+.text {
+  width: 45%;
+  color: black;
+}
+
+.textR {
+  width: 90%;
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: -5%;
+  margin-bottom: 2%;
+}
+
+.altColor {
+  background-color: white;
+}
+
+.comingsoon {
+  text-align: center;
+  font-weight: 300;
+  font-size: 350%;
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
+
+@media screen and (max-width: 800px) {
+  .left, .right{
+    width: 45%;
+    margin: 1%;
+  }
+  .text {
+    float: none;
+    margin: 1%;
+    width: 100%;
+  }
+  .log {
+    float: left;
+    width: 35vw;
+    height: 18%;
+    margin-right: 2%;
+    margin-bottom: 8%;
+  }
+  img  {
+    width: 100%;
+    margin-bottom: 5%;
+  }
+
+  .qRightImg {
+    float: left;
+    margin-top: 25%;
+    margin-bottom: 35%;
+  }
+  .buttonResp {
+    margin-left: 40%;
+    margin-bottom: 5%;
+  }
+  .buttonResp2 {
+    margin-left: 30%;
+    margin-bottom: 5%;
+  }
+  .pictures {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .buttonResp, .buttonResp2 {
+    margin-left: 0;
+  }
+
+  .log {
+    float: left;
+    width: 35vw;
+    height: 18%;
+    margin-right: 2%;
+    margin-bottom: 0%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  img {
+    display: none;
+    width: 0%;
+    height: 0%;
+  }
+  .log {
+    width: 0%;
+    height: 0%;
+  }
+  li {
+    display: block;
+  }
+  li a {
+    display: block;
+  }
+}
+
+/* ABOUT ME TEXT */
+
+.aboutme {
+  font-family: 'Barlow', sans-serif;
+  margin-top: 8%;
+  margin-bottom: 5%;
+  font-size: 60px;
+  font-weight: 300;
+}
+
+.aboutmetext {
+  font-size: 1.2em;
+  line-height: 35px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  background-color: transparent;
+}
+
+.learnmore {
+  border-radius: 50%;
+  border-color: black;
+  background-color: transparent;
+  display: inline-block;
+  color: black; /* text color */
+  font-size: 1em;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  border-radius: 50px; /* rounded corners */
+  padding: 15px 25px; /* space around text */
+  cursor: pointer;
+}
+
+.learnmore1 {
+  border-radius: 50%;
+  border-color: lightgrey;
+  background-color: transparent;
+  display: inline-block;
+  color: black; /* text color */
+  font-size: 1em;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  border-radius: 50px; /* rounded corners */
+  padding: 5px 5px; /* space around text */
+  cursor: pointer;
+}
+
+.imagebutton {
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: transparent;
+  display: inline-block;
+  color: black; /* text color */
+  font-size: 1em;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 100;
+  border-radius: 10px; /* rounded corners */
+  padding: 5px 5px; /* space around text */
+  cursor: pointer;
+}
+
+.imagebuttonChart {
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: transparent;
+  display: inline-block;
+  color: black; /* text color */
+  font-size: 1em;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 100;
+  border-radius: 10px; /* rounded corners */
+  padding: 5px 5px; /* space around text */
+  cursor: pointer;
+}
+
+.smallImg {
+  width: 20px;
+  height: auto;
+}
+
+
+#hifzTips {
+  background-color: white;
+  /* margin-bottom: -7%; */
+}
+#ytChannel{
+  background-color: rgba(247, 247, 247, 1);
+}
+
+#quran {
+  background-color: rgba(247, 247, 247, 1);
+}
+#quran1 {
+  background-color: white;
+}
+
+#quranQuizzes {
+  background-color: white;
+  /* margin-bottom: -10%; */
+}
+
+#islamicStudies {
+  background-color: white;
+}
+
+/* CONTACT AREA */
+
+#contact {
+  margin: 5%;
+  margin-bottom: 2%;
+  margin-top: 0%;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 100;
+  background-color: silver;
+}
+
+.contactinfo {
+  font-family: 'Barlow', sans-serif;
+  padding-bottom: 2.5%;
+  padding-top: 2.5%;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 100;
+  background-color: silver;
+}
+
+.contactForm {
+  width: 49%;
+  background-color: lightgrey;
+  height: 110%;
+  float: left;
+  padding: 3%;
+  padding-top: 2%;
+  padding-right: 0%;
+  margin: 0;
+}
+
+#ourEmail {
+  font-size: 150%;
+  font-weight: 400;
+}
+
+.imgContact {
+  float: left;
+  width: 35%;
+  height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .contactPic {
+    display: hidden;
+    width: 0%;
+    height: 0%;
+  }
+  .contactPage {
+    display: block;
+  }
+  .contactForm {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.contactPage {
+  display: inline-block;
+}
+
+/* FOOTER AREA */
+/*
+.space {
+  margin-bottom: 5%;
+} */
+
+/* .cntnt {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 12%;
+  margin-bottom: 50%;
+} */
+
+.footer {
+  background-color: rgba(247, 247, 247, 1);
+  padding-top: 1%;
+  padding-bottom: 1%;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 0%;
+}
+
+/* Scroll back to top */
+
+.h5 {
+  font-size: 60%;
+}
+
+#myBtn {
+  /* display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: rgba(247, 247, 247, 1);
+  color: black; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 15px; /* Increase font size */
+  float: right;
+  font-weight: 100;
+}
+
+#myBtn:hover {
+  background-color: white; /* Add a dark-grey background on hover */
+}
+
+.titleHeader {
+  margin-top: 0%;
+}
+
+.quranImg {
+  width: 90%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+/* BLOG POST STYLE */
+
+.blogpost {
+  /* margin: 5%; */
+  background-color: #f2f2f2;
+  padding: 5%;
+  padding-top: 2%;
+  /* margin-top: 2%; */
+  box-shadow: 15px 15px lightgrey;
+  /* width: 50%;
+  float: right; */
+}
+
+.blogContainer {
+  width: 58%;
+  float: right;
+  margin: 5%;
+  margin-top: 2%;
+  height: 100%;
+}
+
+.blogContainer1 {
+  width: 90%;
+  float: right;
+  margin: 5%;
+  margin-top: 2%;
+  height: 100%;
+}
+
+.blogCDownloads {
+  width: 90%;
+  float: right;
+  margin: 5%;
+  margin-top: 2%;
+  height: 80%;
+}
+
+.blogCDownloads .blogpost {
+  padding: 2%;
+  margin-bottom: 7%;
+}
+
+.contentC {
+  /* margin-bottom: 10%; */
+  padding-bottom: 10%;
+}
+
+.blogText {
+  font-weight: 400;
+  font-size: 130%;
+}
+
+.blogTextH4 {
+  font-weight: 400;
+  font-size: 140%;
+  font-style: bold;
+}
+
+.blogPostImgRight {
+  float: right;
+  width:25%;
+  margin: 3%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border-color: black;
+  border-style: double;
+}
+
+.arabic {
+  text-align: right;
+}
+
+.sourceAuthor {
+  font-size: 90%;
+  font-style: italic;
+  margin-top: 8%;
+}
+
+.citation {
+  font-size: 90%;
+  margin-top: 8%;
+  margin-bottom: -6%;
+}
+
+.textNote {
+  font-size: 95%;
+}
+
+.metaData {
+  font-size: 90%;
+}
+
+.hifzTipsHeader {
+  margin-bottom: 0%;
+}
+
+.sidebar {
+  width: 23%;
+  float: left;
+  margin-left: 5%;
+  background-color: #f2f2f2;
+  padding: 1%;
+  padding-top: 0%;
+  margin-top: 2%;
+  box-shadow: 15px 15px lightgrey;
+  margin-bottom: 5%;
+}
+
+.sidebarOl {
+  padding: 0;
+}
+
+.sidebarList {
+  display: block;
+  text-align: left;
+  font-weight: 400;
+  margin-top: 6%;
+  margin-bottom: 4%;
+  /* margin-left: -16%; */
+  font-size: 110%;
+}
+
+.sidebarList a {
+  display: block;
+  text-align: left;
+  font-weight: 400;
+  /* margin-left: -16%; */
+  font-size: 110%;
+  padding: 1%;
+}
+
+.hifzTipsHeader {
+  margin-bottom: 8%;
+  font-size: 280%;
+}
+
+.nextPre {
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+
+.nextLsn {
+  float: right;
+  /* background-color: #888888; */
+  border-color: lightgrey;
+  background-color: transparent;
+  border-radius: 15px;
+  display: inline-block;
+  color: black; /* text color */
+  font-size: 1em;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  padding: 10px 25px; /* space around text */
+  cursor: pointer;
+}
+
+.preLsn {
+  float: left;
+  /* background-color: #888888; */
+  border-color: lightgrey;
+  background-color: transparent;
+  border-radius: 15px;
+  display: inline-block;
+  color: black; /* text color */
+  font-size: 1em;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  padding: 10px 25px; /* space around text */
+  cursor: pointer;
+}
+
+@media screen and (max-width:700px) {
+  .sidebar {
+    width: 90%;
+    float: none;
+    margin-left: 2%;
+    margin-right: 2%;
+    box-shadow: 5px 5px lightgrey;
+  }
+  .blogContainer {
+    width: 90%;
+    float: none;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .blogpost {
+    box-shadow: 5px 5px lightgrey;
+  }
+  .hifzTipsHeader {
+    margin-bottom: 2%;
+  }
+  .hifzTipsSubHead {
+    margin-bottom: 0%;
+  }
+  .sidebarOl {
+    margin-top: 0%;
+  }
+  .sidebarList {
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+  .contentC {
+    margin-left: 2%;
+  }
+
+}
+
+.icon2 {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebarList {
+    display: none;
+  }
+  .icon2 {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .responsiveSide .sidebarList {
+    display: block;
+    text-align: center;
+  }
+  .responsiveSide .sideNav li a {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .sidebarList {
+    display: none;
+  }
+  .icon2 {
+    display: block;
+  }
+
+  .responsiveSide .sidebarList {
+    display: block;
+    text-align: center;
+  }
+  .responsiveSide .sidebarList {
+    display: block;
+  }
+}
+
+/* .mainContainer {
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 100px; /* height of your footer */
+/*}*/
+
+.ytvid {
+  margin-top: 5%;
+  border: 0;
+  width: 100%;
+  /* height: 100%; */
+}
+
+.vidContainer {
+  margin: 5%;
+  margin-top: 1%;
+}
+
+.next {
+  float: right;
+  text-align: center;
+  background-color: transparent;
+  display: inline-block;
+  color: black; /* text color */
+  font-size: 1.5em;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  /* border-radius: 50px; */
+  padding: 0.75% 0.75%;
+  border-style: none;
+  /* border-color: black; */
+  margin-top: 0%;
+}
+
+.currentVid {
+  float: center;
+  text-align: center;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  border-radius: 15px;
+  padding: 0.75% 0.75%;
+  border-style: solid;
+  border-color: lightgrey;
+  color: #292929;
+  background-color: lightgrey;
+  /* width: 55%;
+  height: 15%; */
+  font-size: 120%;
+  margin-top: 0%;
+  cursor: pointer;
+  margin-left: -3.5%;
+}
+
+.firstLsn {
+  margin-left: 12%;
+}
+
+.lastLsn {
+  margin-right: 10%;
+}
+
+button {
+  cursor: pointer;
+}
+
+.previous {
+  float: left;
+  text-align: center;
+  background-color: transparent;
+  display: inline-block;
+  color: black; /* text color */
+  font-size: 1.5em;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  /* border-radius: 50px; */
+  padding: 0.75% 0.75%;
+  border-style: none;
+  /* border-color: black; */
+  margin-top: 0%;
+}
+
+.row {
+  display: inline-block;
+  text-align: center;
+  margin: 0;
+  margin-top: 3%;
+  width: 100%;
+}
+
+.tajBrLsn {
+  margin: 3%;
+}
+
+.dontShow {
+  display: none;
+  background-color: red;
+}
+
+.lessonInd {
+  border-color: lightgrey;
+  background-color: transparent;
+  border-radius: 15px;
+  display: inline-block;
+  color: black; /* text color */
+  font-size: 1.5em;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  padding: 5px 20px; /* space around text */
+  cursor: pointer;
+  box-shadow: 5px 5px lightgrey;
+  margin-left: 2%;
+}
+
+/*<iframe src="https://www.powr.io/hit-counter/u/0ccb1c38_1611332506#platform=iframe" style="width:100%;" height="25px" frameborder="0">
+<div class="powr-hit-counter" id="0ccb1c38_1611332506"></div><script src="https://www.powr.io/powr.js?platform=html"></script></iframe>
+*/

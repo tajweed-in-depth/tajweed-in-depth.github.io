@@ -1,0 +1,179 @@
+<html>
+<meta charset="utf-8">
+<title> eDeen Academy | Home</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+<link rel="stylesheet" href="site.css">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Basic&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400&display=swap" rel="stylesheet">
+
+<header>
+  <div class="header1">
+    <div class="logo1">
+      <a href="index.html"><img src="eDALogo.png"></a>
+    </div>
+
+    <div class="naviBar">
+      <ul class="topnav" id="myTopnav">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <div class="dropdown">
+          <li><a href="#">Courses</a></li>
+        <div class="dropdown-content">
+
+          <div class="dropdown2">
+          <li><a href="#" class="dropdown2btn">Basic</a></li>
+          <div class="dropdown-content2">
+          <li><a href="aqeedah.html">Aqeedah</a></li>
+          <li><a href="fiqh.html">Fiqh</a></li>
+          <li><a href="hadeeth.html">Hadeeth</a></li>
+          <li><a href="seerah.html">Seerah</a></li>
+          <li><a href="a&D.html">Adaab & Dua</a></li></div>
+          </div>
+
+          <div class="dropdown3">
+          <li><a href="#" class="dropdown3btn">Intermediate</a></li>
+          <div class="dropdown-content3">
+          <li><a href="aqeedahInter.html">Aqeedah</a></li>
+          <li><a href="fiqhInter.html">Fiqh</a></li>
+          <li><a href="hadeethInter.html">Hadeeth</a></li>
+          <li><a href="seerahInter.html">Seerah</a></li>
+          <li><a href="a&DInter.html">Adaab & Dua</a></li></div>
+          </div>
+
+          <div class="dropdown4">
+          <li><a href="#" class="dropdown4btn">Advanced</a></li>
+          <div class="dropdown-content4">
+          <li><a href="aqeedahAdvan.html">Aqeedah</a></li>
+          <li><a href="fiqhAdvan.html">Fiqh</a></li>
+          <li><a href="hadeethAdvan.html">Hadeeth</a></li>
+          <li><a href="seerahAdvan.html">Seerah</a></li>
+          <li><a href="a&DAdvan.html">Adaab & Dua</a></li></div>
+          </div>
+
+          <li><a href="nawawiHadPg.html" class="dropdown2btn">40 Hadeeth An-Nawawi</a></li>
+          <li><a href="generalTopics.html" class="dropdown2btn">General Topics</a></li>
+      </div>
+      </div>
+        <li><a href="https://www.tajweedindepth.com" target="blank">Tajweed In Depth</a></li>
+        <li><a href="game.html">Arabic Alphabet Game</a></li>
+        <li><a href="https://almurattal.com" target="_blank">Quran</a></li>
+        <li><a href="http://eepurl.com/hpnXfT" target="_blank">Subscribe</a></li>
+        <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a></li>
+      </ul>
+    </div>
+      <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+      </script>
+  </div>
+</header>
+
+<body>
+  <!-- <h1 id="logo">eDeen Academy</h1> -->
+
+
+  <div class="mainPgRow">
+    <!-- <div class="title-slogan rowItem">
+      <p id="title1">Learning The Deen</p>
+      <p id="title2">Made Easier</p>
+      <p id="subtitle1">Knowledge Before Action</p>
+    </div> -->
+
+    <div class="carousel">
+      <div class="image-container" id="imgs">
+        <img src="edeenAdaab&DuaALThumbnail.png" alt="first-image">
+        <img src="edeenAqeedahBLResized.png" alt="second-image">
+        <img src="edeenFiqhILResized.png" alt="third-image">
+        <img src="edeenHadeethBLResized.png" alt="fourth-image">
+        <img src="edeenSeerahALResized.png" alt="fifth-image">
+      </div>
+    </div>
+  </div>
+<!--
+    <div class="slideShowCont rowItem">
+      <img class="mySlides fade" src="learningEasier.png">
+      <img class="mySlides fade" src="courses.png">
+    </div>
+  </div> -->
+
+  <script>
+    // var myIndex = 0;
+    // carousel();
+    //
+    // function carousel() {
+    //   var i;
+    //   var x = document.getElementsByClassName("mySlides");
+    //   for (i = 0; i < x.length; i++) {
+    //     x[i].style.display = "none";
+    //   }
+    //   myIndex++;
+    //   if (myIndex > x.length) {myIndex = 1}
+    //   x[myIndex-1].style.display = "block";
+    //   setTimeout(carousel, 6000); // Change image every 2 seconds
+    //
+    // }
+
+    const imgs = document.getElementById('imgs')
+
+    const img = document.querySelectorAll('#imgs img')
+
+    let idx = 0
+
+    let interval = setInterval(run, 3000)
+
+    function run() {
+        idx++
+        changeImage()
+    }
+
+    function changeImage() {
+        if(idx > img.length - 1) {
+            idx = 0
+        } else if(idx < 0) {
+            idx = img.length - 1
+        }
+
+        imgs.style.transform = `translateX(${-idx * 710}px)`
+    }
+
+    function resetInterval() {
+        clearInterval(interval)
+        interval = setInterval(run, 3000)
+    }
+
+  </script>
+
+  <div class="bounce">
+    <p class="marquee">
+     <span>
+        ~ *All Basic Courses are available for use* ~ ~ *Don't forget to checkout Tajweed In Depth (tajweedindepth.com)* ~ ~ *Subscribe to get updates on new lessons and content* ~
+     </span>
+     </p>
+  </div>
+
+  <div>
+    <p class="coursesTitle">COURSES</p>
+    <div class="courseImageDiv">
+      <a href="aqeedah.html"><img class="courseImage" src="Aqeedah.png"></a>
+      <a href="fiqh.html"><img class="courseImage" src="Fiqh.png"></a>
+      <a href="hadeeth.html"><img class="courseImage" src="HADEETH1.png"></a>
+      <a href="seerah.html"><img class="courseImage" src="SEERAH.png"></a>
+      <a href="a&D.html"><img class="courseImage" src="A&d.png"></a>
+    </div>
+  </div>
+
+</body>
+
+<!-- hitwebcounter Code START -->
+<a href="https://www.hitwebcounter.com" target="_blank">
+<img src="https://hitwebcounter.com/counter/counter.php?page=7742915&style=0007&nbdigits=7&type=page&initCount=1000" title="Free Counter" Alt="web counter"   border="0" /></a>
+
+</html>

@@ -1,0 +1,205 @@
+<html>
+<meta charset="utf-8">
+<title> Seerah | eDeen Academy </title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+<link rel="stylesheet" href="site.css">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Basic&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400&display=swap" rel="stylesheet">
+
+<header>
+  <div class="header1">
+    <div class="logo1">
+      <a href="index.html"><img src="eDALogo.png"></a>
+    </div>
+
+    <div class="naviBar">
+      <ul class="topnav" id="myTopnav">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <div class="dropdown">
+          <li><a href="#">Courses</a></li>
+        <div class="dropdown-content">
+
+          <div class="dropdown2">
+          <li><a href="#" class="dropdown2btn">Basic</a></li>
+          <div class="dropdown-content2">
+          <li><a href="aqeedah.html">Aqeedah</a></li>
+          <li><a href="fiqh.html">Fiqh</a></li>
+          <li><a href="hadeeth.html">Hadeeth</a></li>
+          <li><a href="seerah.html">Seerah</a></li>
+          <li><a href="a&D.html">Adaab & Dua</a></li></div>
+          </div>
+
+          <div class="dropdown3">
+          <li><a href="#" class="dropdown3btn">Intermediate</a></li>
+          <div class="dropdown-content3">
+          <li><a href="aqeedahInter.html">Aqeedah</a></li>
+          <li><a href="fiqhInter.html">Fiqh</a></li>
+          <li><a href="hadeethInter.html">Hadeeth</a></li>
+          <li><a href="seerahInter.html">Seerah</a></li>
+          <li><a href="a&DInter.html">Adaab & Dua</a></li></div>
+          </div>
+
+          <div class="dropdown4">
+          <li><a href="#" class="dropdown4btn">Advanced</a></li>
+          <div class="dropdown-content4">
+          <li><a href="aqeedahAdvan.html">Aqeedah</a></li>
+          <li><a href="fiqhAdvan.html">Fiqh</a></li>
+          <li><a href="hadeethAdvan.html">Hadeeth</a></li>
+          <li><a href="seerahAdvan.html">Seerah</a></li>
+          <li><a href="a&DAdvan.html">Adaab & Dua</a></li></div>
+          </div>
+
+          <li><a href="nawawiHadPg.html" class="dropdown2btn">40 Hadeeth An-Nawawi</a></li>
+          <li><a href="generalTopics.html" class="dropdown2btn">General Topics</a></li>
+      </div>
+      </div>
+        <li><a href="https://www.tajweedindepth.com" target="blank">Tajweed In Depth</a></li>
+        <li><a href="https://almurattal.com" target="_blank">Quran</a></li>
+        <li><a href="http://eepurl.com/hpnXfT" target="_blank">Subscribe</a></li>
+        <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a></li>
+      </ul>
+    </div>
+      <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+      </script>
+  </div>
+</header>
+
+<body>
+
+  <div class="center smal">
+    <a href="seerah.html"><button class="courseBut srh smaller" id="lWS">SEERAH <span class="basicTextColon">|</span> <span class="basicText"> Intermediate Level</span></button></a>
+  </div>
+
+  <div class="row">
+    <p id = "GFG_DOWN" style =
+            "color:green; font-size: 20px; font-weight: bold;">
+        </p>
+    <button class="previous noShow" id="prev_vid">Previous Lesson</button>
+    <button class="currentVid" id="lessonNumber"> Lesson 1 </button>
+    <button class="next" id="next_vid">Next Lesson</button>
+  </div>
+
+  <!-- <iframe class="ytvid" src="SER1.mp4" allowfullscreen></iframe> -->
+  <video id="myvideo" class="ytvid" src="SER1.mp4" oncontextmenu="return false;" controls autoplay disablepictureinpicture controlslist="nodownload">
+    <!-- <source class="ytvid activeVid" src="SER1.mp4" type="video/mp4" allowfullscreen/> -->
+  </video>
+
+  <script>
+      var vid = document.getElementById('myvideo');
+      var myvids = [
+        "https://www.edeenacademy.com/SERIntermediate/SER1.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER2.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER3.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER4.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER5.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER6.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER7.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER8.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER9.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER10.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER11.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER12.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER13.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER14.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER15.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER16.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER17.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER18.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER19.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER20.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER21.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER22.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER23.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER24.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER25.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER26.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER27.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER28.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER29.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER30.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER31.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER32.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER33.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER34.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER35.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER36.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER37.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER38.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER39.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER40.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER41.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER42.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER43.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER44.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER45.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER46.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER47.mp4",
+        "https://www.edeenacademy.com/SERIntermediate/SER48.mp4"
+        ];
+
+      var activeVideo = (localStorage.getItem("reqVid")-1);
+      var lsncount = activeVideo+1;
+
+      window.addEventListener('load', function(e) {
+        vid.src = myvids[activeVideo];
+        document.getElementById('lessonNumber').innerHTML = "Lesson " + (lsncount);
+        if (lsncount > 1) {
+          document.getElementById('prev_vid').className = "previous";
+        }
+        if (activeVideo == 0) {
+          document.getElementById('lessonNumber').className = "currentVid firstLsn";
+        } else {
+          document.getElementById('lessonNumber').className = "currentVid";
+        }
+        if (activeVideo == 47) {
+          document.getElementById('next_vid').className = "next noShow";
+          document.getElementById('lessonNumber').className = "currentVid lastLsn";
+        }
+      });
+
+
+      var nextvid = document.getElementById('next_vid');
+      nextvid.addEventListener('click', function(e) {
+
+        activeVideo = (++activeVideo);
+        vid.src = myvids[activeVideo];
+        document.getElementById('lessonNumber').innerHTML = "Lesson " + (lsncount+=1);
+        document.getElementById('prev_vid').className = "previous";
+        if (activeVideo == 47) {
+          document.getElementById('next_vid').className = "next noShow";
+          document.getElementById('lessonNumber').className = "currentVid lastLsn";
+        } else if (activeVideo < 47 && activeVideo != 0) {
+          document.getElementById('lessonNumber').className = "currentVid";
+        }
+      });
+
+      var previousvid = document.getElementById('prev_vid');
+      previousvid.addEventListener('click', function(e) {
+        activeVideo = (--activeVideo);
+        vid.src = myvids[activeVideo];
+        document.getElementById('lessonNumber').innerHTML = "Lesson " + (lsncount-=1);
+        if (activeVideo == 0) {
+          document.getElementById('prev_vid').className = "previous noShow";
+          document.getElementById('lessonNumber').className = "currentVid firstLsn";
+        }
+        if (activeVideo != 47) {
+          document.getElementById('next_vid').className = "next";
+          document.getElementById('lessonNumber').className = "currentVid";
+        }
+      });
+  </script>
+
+
+</body>
+</html>

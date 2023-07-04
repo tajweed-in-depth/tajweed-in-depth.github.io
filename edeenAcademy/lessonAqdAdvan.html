@@ -1,0 +1,205 @@
+<html>
+<meta charset="utf-8">
+<title> Aqeedah | eDeen Academy </title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+<link rel="stylesheet" href="site.css">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Basic&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400&display=swap" rel="stylesheet">
+
+<header>
+  <div class="header1">
+    <div class="logo1">
+      <a href="index.html"><img src="eDALogo.png"></a>
+    </div>
+
+    <div class="naviBar">
+      <ul class="topnav" id="myTopnav">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <div class="dropdown">
+          <li><a href="#">Courses</a></li>
+        <div class="dropdown-content">
+
+          <div class="dropdown2">
+          <li><a href="#" class="dropdown2btn">Basic</a></li>
+          <div class="dropdown-content2">
+          <li><a href="aqeedah.html">Aqeedah</a></li>
+          <li><a href="fiqh.html">Fiqh</a></li>
+          <li><a href="hadeeth.html">Hadeeth</a></li>
+          <li><a href="seerah.html">Seerah</a></li>
+          <li><a href="a&D.html">Adaab & Dua</a></li></div>
+          </div>
+
+          <div class="dropdown3">
+          <li><a href="#" class="dropdown3btn">Intermediate</a></li>
+          <div class="dropdown-content3">
+          <li><a href="aqeedahInter.html">Aqeedah</a></li>
+          <li><a href="fiqhInter.html">Fiqh</a></li>
+          <li><a href="hadeethInter.html">Hadeeth</a></li>
+          <li><a href="seerahInter.html">Seerah</a></li>
+          <li><a href="a&DInter.html">Adaab & Dua</a></li></div>
+          </div>
+
+          <div class="dropdown4">
+          <li><a href="#" class="dropdown4btn">Advanced</a></li>
+          <div class="dropdown-content4">
+          <li><a href="aqeedahAdvan.html">Aqeedah</a></li>
+          <li><a href="fiqhAdvan.html">Fiqh</a></li>
+          <li><a href="hadeethAdvan.html">Hadeeth</a></li>
+          <li><a href="seerahAdvan.html">Seerah</a></li>
+          <li><a href="a&DAdvan.html">Adaab & Dua</a></li></div>
+          </div>
+
+          <li><a href="nawawiHadPg.html" class="dropdown2btn">40 Hadeeth An-Nawawi</a></li>
+          <li><a href="generalTopics.html" class="dropdown2btn">General Topics</a></li>
+      </div>
+      </div>
+        <li><a href="https://www.tajweedindepth.com" target="blank">Tajweed In Depth</a></li>
+        <li><a href="https://almurattal.com" target="_blank">Quran</a></li>
+        <li><a href="http://eepurl.com/hpnXfT" target="_blank">Subscribe</a></li>
+        <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a></li>
+      </ul>
+    </div>
+      <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+      </script>
+  </div>
+</header>
+
+<body>
+
+  <div class="center smal">
+    <a href="aqeedah.html"><button class="courseBut smaller" id="lWA">AQEEDAH <span class="basicTextColon">|</span> <span class="basicText"> Advanced Level</span></button></a>
+  </div>
+
+  <div class="row">
+    <p id = "GFG_DOWN" style =
+            "color:green; font-size: 20px; font-weight: bold;">
+        </p>
+    <button class="previous noShow" id="prev_vid">Previous Lesson</button>
+    <button class="currentVid" id="lessonNumber"> Lesson 1 </button>
+    <button class="next" id="next_vid">Next Lesson</button>
+  </div>
+
+  <!-- <iframe class="ytvid" src="AQD1.mp4" allowfullscreen></iframe> -->
+  <video id="myvideo" class="ytvid" src="AQD1.mp4" oncontextmenu="return false;" controls autoplay disablepictureinpicture controlslist="nodownload">
+    <!-- <source class="ytvid activeVid" src="AQD1.mp4" type="video/mp4" allowfullscreen/> -->
+  </video>
+
+  <script>
+      var vid = document.getElementById('myvideo');
+      var myvids = [
+        "https://www.edeenacademy.com/AQDAdvanced/AQD1.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD2.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD3.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD4.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD5.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD6.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD7.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD8.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD9.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD10.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD11.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD12.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD13.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD14.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD15.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD16.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD17.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD18.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD19.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD20.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD21.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD22.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD23.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD24.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD25.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD26.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD27.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD28.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD29.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD30.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD31.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD32.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD33.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD34.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD35.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD36.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD37.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD38.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD39.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD40.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD41.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD42.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD43.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD44.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD45.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD46.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD47.mp4",
+        "https://www.edeenacademy.com/AQDAdvanced/AQD48.mp4"
+        ];
+
+      var activeVideo = (localStorage.getItem("reqVid")-1);
+      var lsncount = activeVideo+1;
+
+      window.addEventListener('load', function(e) {
+        vid.src = myvids[activeVideo];
+        document.getElementById('lessonNumber').innerHTML = "Lesson " + (lsncount);
+        if (lsncount > 1) {
+          document.getElementById('prev_vid').className = "previous";
+        }
+        if (activeVideo == 0) {
+          document.getElementById('lessonNumber').className = "currentVid firstLsn";
+        } else {
+          document.getElementById('lessonNumber').className = "currentVid";
+        }
+        if (activeVideo == 47) {
+          document.getElementById('next_vid').className = "next noShow";
+          document.getElementById('lessonNumber').className = "currentVid lastLsn";
+        }
+      });
+
+
+      var nextvid = document.getElementById('next_vid');
+      nextvid.addEventListener('click', function(e) {
+
+        activeVideo = (++activeVideo);
+        vid.src = myvids[activeVideo];
+        document.getElementById('lessonNumber').innerHTML = "Lesson " + (lsncount+=1);
+        document.getElementById('prev_vid').className = "previous";
+        if (activeVideo == 47) {
+          document.getElementById('next_vid').className = "next noShow";
+          document.getElementById('lessonNumber').className = "currentVid lastLsn";
+        } else if (activeVideo < 47 && activeVideo != 0) {
+          document.getElementById('lessonNumber').className = "currentVid";
+        }
+      });
+
+      var previousvid = document.getElementById('prev_vid');
+      previousvid.addEventListener('click', function(e) {
+        activeVideo = (--activeVideo);
+        vid.src = myvids[activeVideo];
+        document.getElementById('lessonNumber').innerHTML = "Lesson " + (lsncount-=1);
+        if (activeVideo == 0) {
+          document.getElementById('prev_vid').className = "previous noShow";
+          document.getElementById('lessonNumber').className = "currentVid firstLsn";
+        }
+        if (activeVideo != 47) {
+          document.getElementById('next_vid').className = "next";
+          document.getElementById('lessonNumber').className = "currentVid";
+        }
+      });
+  </script>
+
+
+</body>
+</html>
